@@ -55,6 +55,10 @@ dependencies {
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$project.coroutinesAndroidVersion"
     implementation "com.android.support:recyclerview-v7:$project.supportLibrary"
+    implementation "com.squareup.retrofit2:retrofit:$project.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$project.retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$project.httpLoggingVersion"
+    implementation "ru.gildor.coroutines:kotlin-coroutines-retrofit:$project.kotlinCoroutinesRetrofitVersion"
 }
 
 kotlin {
