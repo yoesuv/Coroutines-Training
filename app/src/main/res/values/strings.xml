@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Coroutines Training</string>
+
+    <string name="button_list_place">LIST PLACE</string>
 </resources>

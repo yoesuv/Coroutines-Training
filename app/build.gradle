@@ -33,6 +33,15 @@ android {
             signingConfig signingConfigs.config
         }
     }
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res',
+                    'src/main/res-menu',
+                    'src/main/res-menu/list-place',
+            ]
+        }
+    }
 }
 
 dependencies {
@@ -43,4 +52,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$project.coroutinesAndroidVersion"
+    implementation "com.android.support:recyclerview-v7:$project.supportLibrary"
+}
+
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
 }
