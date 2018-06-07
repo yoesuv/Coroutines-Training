@@ -22,9 +22,13 @@ class ListPlacePresenter(private val viewListPlace: ListPlaceContract.ViewListPl
                 val listPlace = restApi.getListPlace().await()
                 viewListPlace.setData(listPlace)
             } catch (http: HttpException) {
-
+                withContext(UI){
+                    viewListPlace.setHttpError()
+                }
             } catch (error: Exception) {
-
+                withContext(UI){
+                    viewListPlace.setError()
+                }
             } finally {
                 withContext(UI){
                     viewListPlace.dismissLoading()
