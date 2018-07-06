@@ -2,7 +2,7 @@ timestampedNode{
     stage ("Checkout") {
         checkout scm
         sh "chmod a+x ./gradlew"
-        gitLib = load "git_push_ssh.groovy"
+        //gitLib = load "git_push_ssh.groovy"
     }
 
     stage ("Build") {
